@@ -150,6 +150,22 @@ header {
     }
 }
 
+#nav_btn {
+    display: none;
+    cursor: pointer;
+
+    .hmenu {
+        position: absolute;
+        display: none;
+    }
+
+    .active {
+        display: block;
+    }
+
+}
+
+
 main {
     padding: 7rem 0;
     background-image: url(../images/illustration-devices.svg);
@@ -233,6 +249,7 @@ p {
         position: relative;
 
         nav {
+            display: none;
             position: absolute;
             top: 120%;
             left: 50%;
@@ -255,6 +272,10 @@ p {
                 }
             }
         }
+    }
+
+    #nav_btn {
+        display: flex;
     }
 }
 

@@ -495,6 +495,18 @@ header .separator {
   background-color: hsl(231deg, 7%, 65%);
 }
 
+#nav_btn {
+  display: none;
+  cursor: pointer;
+}
+#nav_btn .hmenu {
+  position: absolute;
+  display: none;
+}
+#nav_btn .active {
+  display: block;
+}
+
 main {
   padding: 7rem 0;
   background-image: url(../images/illustration-devices.svg);
@@ -569,6 +581,7 @@ p {
     position: relative;
   }
   header nav {
+    display: none;
     position: absolute;
     top: 120%;
     left: 50%;
@@ -593,5 +606,11 @@ p {
   header nav ul .separator {
     width: 100%;
     height: 1px;
+  }
+
+  #nav_btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
