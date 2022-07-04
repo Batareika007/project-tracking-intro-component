@@ -1,5 +1,6 @@
 @import 'normalize';
 @import 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap');
 
 /* hide scroll bar if needed */
 
@@ -36,21 +37,63 @@ select {
     /* text-overflow: ''; */
 }
 
+ul li {
+    list-style: none;
+}
+
+
+a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+    text-decoration: none;
+    color: inherit;
+}
+
 /** ============ start  custom style ============ */
 
+body {
+    position: relative;
+    font-family: 'Barlow',
+        sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    background-size: auto;
+    width: 100%;
+    height: 100vh;
 
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: url(../design/desktop-design.jpg) no-repeat center center;
+        opacity: 0.6;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        position: absolute;
 
-.wrapper {
-    min-height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button {
+
+    font-family: 'Barlow Condensed',
+        sans-serif;
+    font-weight: 700;
+
 }
 
 .container {
-    max-width: 1160px;
+    max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 1.5rem;
 }
-
