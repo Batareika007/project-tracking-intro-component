@@ -15,6 +15,7 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      margin: 0 auto;
     }
 
     .attribution a {
@@ -25,23 +26,28 @@
 
 <body>
   <div class="container">
-
-
     <header>
+
       <div class="logo">
         <a href="index"><img src="images/logo.svg" alt="logo"></a>
       </div>
+
       <nav>
         <ul>
           <li><a href="#">Product</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="#">Pricing</a></li>
-          <li><span class="separator"></span></li>
-          <li><a href="#">Login</a></li>
+          <li class="flex-center"><span class="separator"></span></li>
+          <li class="login"><a href="#">Login</a></li>
         </ul>
       </nav>
+
     </header>
-    <main>
+  </div>
+
+
+  <main>
+    <div class="container">
 
       <div class="top">
         <span>New</span> <span>Monograph Dashboard</span>
@@ -50,17 +56,22 @@
       <h1> Powerful insights into your team</h1>
       <p>Project planning and time tracking for agile teams</p>
 
-      <div class="bottom">
+      <div class="bottom flex-center">
         <button>Schedule a demo</button> <span> to see a live preview</span>
       </div>
 
-    </main>
+    </div>
+  </main>
+
+  <div class="container">
     <footer>
       <p class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="https://www.frontendmentor.io/profile/Batareika007" target="_blank">Alexei</a>.
       </p>
     </footer>
+
+
   </div>
 </body>
 
