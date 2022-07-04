@@ -563,3 +563,35 @@ p {
   letter-spacing: 3px;
   color: hsl(231deg, 7%, 65%);
 }
+
+@media screen and (max-width: 1024px) {
+  header {
+    position: relative;
+  }
+  header nav {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    max-width: 400px;
+    width: 90%;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 15px hsl(231deg, 7%, 65%);
+            box-shadow: 0 0 15px hsl(231deg, 7%, 65%);
+  }
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  header nav ul .separator {
+    width: 100%;
+    height: 1px;
+  }
+}
