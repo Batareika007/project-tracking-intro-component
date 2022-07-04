@@ -366,16 +366,6 @@ template {
 
 /*! ================ normalize.css end ====================== */
 /* hide scroll bar if needed */
-.hide-scroll {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
-.hide-scroll::-webkit-scrollbar {
-  display: none;
-}
-
 .flex-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,6 +420,7 @@ body::after {
   content: "";
   width: 48.5vw;
   height: 55vh;
+  max-height: 100vw;
   position: absolute;
   background-color: hsl(207deg, 33%, 95%);
   top: 0;
@@ -439,11 +430,6 @@ body::after {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 a,
 button {
   font-family: "Barlow Condensed", sans-serif;
@@ -508,10 +494,11 @@ header .separator {
 }
 
 main {
-  padding: 7rem 0;
+  padding: 3rem 0;
   background-image: url(../images/illustration-devices.svg);
   background-repeat: no-repeat;
   background-position: 51.5vw center;
+  background-size: auto;
 }
 
 .top {
@@ -541,7 +528,7 @@ h1 {
 
 p {
   max-width: 300px;
-  margin: 2rem 0;
+  margin: 2rem 0 3.5rem;
   line-height: 150%;
   font-size: 1.2rem;
 }
@@ -551,14 +538,16 @@ p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-top: 62px;
+  gap: 24px;
 }
 .bottom button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   text-transform: inherit;
   color: hsl(207deg, 33%, 95%);
   background-color: hsl(0deg, 100%, 68%);
   padding: 14px 34px;
-  margin-right: 24px;
   border-radius: 8px;
   cursor: pointer;
   -webkit-transition: all ease-in-out 0.3s;
@@ -577,8 +566,13 @@ p {
 }
 
 @media screen and (max-width: 1024px) {
+  body:after {
+    border-bottom-left-radius: 14.5vw;
+  }
+
   header {
     position: relative;
+    margin-bottom: 7vw;
   }
   header nav {
     display: none;
@@ -612,5 +606,36 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  main {
+    background-position: 3vw top;
+    background-size: 115%;
+    padding-top: 80vw;
+  }
+
+  .top {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    margin: 1rem 0 2rem;
+    font-size: 1rem;
+  }
+
+  .bottom {
+    gap: 1rem;
+  }
+  .bottom button {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+  .bottom span {
+    letter-spacing: 1px;
+    font-size: 0.7rem;
   }
 }
